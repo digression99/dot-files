@@ -5,11 +5,15 @@ cp ~/dot-files/.zshrc ~/.zshrc
 cp ~/dot-files/.vimrc ~/.vim/vimrc
 
 INSTALL_MINPAC=false
+INSTALL_FZF=false
+INSTALL_PROJECTIONIST=false
 
 while getopts i opt;
 do
 	case $opt in
 		i) INSTALL_MINPAC=true
+		f) INSTALL_FZF=true
+		p) INSTALL_PROJECTIONIST=true
 	esac
 done
 
@@ -21,11 +25,19 @@ then
 fi
 
 # installing fuzzy finder.
-cd $VIMCONFIG/pack/bundle/start
-git clone https://github.com/junegunn/fzf
-$VIMCONFIG/pack/bundle/start/fzf/install --bin
+if [[ "$INSTALL_FZF" == true ]]
+	cd $VIMCONFIG/pack/bundle/start
+	git clone https://github.com/junegunn/fzf
+	$VIMCONFIG/pack/bundle/start/fzf/install --bin
+	brew install ripgrep
+then
+fi
 
-cd $VIMCONFIG/pack/bundle/start
-git clone https://github.com/tpope/vim-projectionist.git
+# installing fuzzy finder.
+if [[ "$INSTALL_FZF" == true ]]
+	cd $VIMCONFIG/pack/bundle/start
+	git clone https://github.com/tpope/vim-projectionist.git
+then
+fi
 
 
