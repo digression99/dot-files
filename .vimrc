@@ -12,11 +12,11 @@ call minpac#add('justinmk/vim-sneak')
 call minpac#add('tpope/vim-scriptease', {'type':'opt'})
 call minpac#add('k-takata/minpac', {'type':'opt'})
 
-# run fzf on ctrl + p
+" run fzf on ctrl + p
 nnoremap <C-p> :<C-u>FZF<CR>
 
-# execute ctags when press f5
+" execute ctags when press f5
 nnoremap <f5> :!ctags -R <CR>
 
-# execute ctags when file save
+" execute ctags when file save
 autocmd BufWritePost * call system("ctags -R")
