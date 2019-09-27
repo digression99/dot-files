@@ -39,4 +39,6 @@ then
 	git clone https://github.com/tpope/vim-projectionist.git
 fi
 
+brew install ctags
+
 
