@@ -1,4 +1,3 @@
-:
 cd ~
 cp ~/dot-files/.zshrc ~/.zshrc
 cp ~/dot-files/.vimrc ~/.vim/vimrc
@@ -6,6 +5,7 @@ cp ~/dot-files/.vimrc ~/.vim/vimrc
 INSTALL_MINPAC=false
 INSTALL_FZF=false
 INSTALL_PROJECTIONIST=false
+INSTALL_PROGRAMS=false
 
 while getopts ifp opt;
 do
@@ -13,6 +13,7 @@ do
 		i) INSTALL_MINPAC=true ;;
 		f) INSTALL_FZF=true ;;
 		p) INSTALL_PROJECTIONIST=true ;;
+		c) INSTALL_PROGRAMS=true ;;
 	esac
 done
 
@@ -39,6 +40,10 @@ then
 	git clone https://github.com/tpope/vim-projectionist.git
 fi
 
-brew install ctags
+# install programs
+if [[ "$INSTALL_PROGRAMS" == true ]]
+then
+	brew install ctags
+fi
 
 
