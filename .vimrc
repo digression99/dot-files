@@ -21,6 +21,7 @@ call minpac#add('tpope/vim-projectionist')
 call minpac#add('radenling/vim-dispatch-neovim')
 call minpac#add('jiangmiao/auto-pairs')
 call minpac#add('tpope/vim-dispatch')
+call minpac#add('kassio/neoterm')
 call minpac#add('tpope/vim-scriptease', {'type':'opt'})
 call minpac#add('k-takata/minpac', {'type':'opt'})
 
@@ -33,3 +34,7 @@ nnoremap <f5> :!ctags -R <CR>
 " execute ctags when file save
 autocmd BufWritePost * call system("ctags -R")
 
+" setup neovim terminal
+let g:neoterm_size = 10
+let g:neoterm_autoinsert = 0
+let g:neoterm_autoscroll = 1
