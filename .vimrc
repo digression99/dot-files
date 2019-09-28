@@ -14,16 +14,25 @@ set shiftwidth=2
 
 packadd minpac
 call minpac#init()
+call minpac#add('vim-scripts/ReplaceWithRegister')
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('tpope/vim-repeat')
+call minpac#add('tpope/vim-surround')
 call minpac#add('justinmk/vim-sneak')
+call minpac#add('easymotion/vim-easymotion')
 call minpac#add('tpope/vim-projectionist')
 call minpac#add('radenling/vim-dispatch-neovim')
 call minpac#add('jiangmiao/auto-pairs')
 call minpac#add('tpope/vim-dispatch')
 call minpac#add('kassio/neoterm')
+call minpac#add('kassio/neoterm')
 call minpac#add('tpope/vim-scriptease', {'type':'opt'})
 call minpac#add('k-takata/minpac', {'type':'opt'})
+
+" javascript related plugins
+call minpac#add('pangloss/vim-javascript')
+call minpac#add('Quramy/tsuquyomi')
+call minpac#add('leafgarland/typescript-vim')
 
 " run fzf on ctrl + p
 nnoremap <C-p> :<C-u>FZF<CR>
