@@ -26,6 +26,7 @@ then
 
 	git clone https://github.com/tpope/vim-projectionist.git
 	git clone https://github.com/tpope/vim-dispatch.git
+	git clone https://github.com/radenling/vim-dispatch-neovim.git
 fi
 
 # install programs
