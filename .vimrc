@@ -2,7 +2,15 @@ set nocompatible
 filetype plugin indent on
 
 syntax on
-set nu
+
+" set nu
+set rnu
+
+" setting up tabs
+set smartindent
+set tabstop=2
+set expandtab
+set shiftwidth=2	
 
 packadd minpac
 call minpac#init()
