@@ -1,8 +1,11 @@
 set nocompatible
+" if there's ftplugin, make it usable.
 filetype plugin indent on
 
+" show syntax highlighting
 syntax on
 
+" show numbers
 " set nu
 set rnu
 
@@ -48,7 +51,6 @@ call minpac#add('leafgarland/typescript-vim')
 " run fzf on ctrl + p
 " nnoremap <C-p> :<C-u>FZF<CR>
 " nnoremap <C-p> :<C-u>CtrlP<CR>
-
 
 " execute ctags when file save
 " too slow...
