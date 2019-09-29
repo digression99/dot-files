@@ -49,8 +49,6 @@ call minpac#add('leafgarland/typescript-vim')
 " nnoremap <C-p> :<C-u>FZF<CR>
 " nnoremap <C-p> :<C-u>CtrlP<CR>
 
-" execute ctags when press f5
-nnoremap <f5> :!ctags -R <CR>
 
 " execute ctags when file save
 " too slow...
@@ -65,3 +63,19 @@ let g:neoterm_autoscroll = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" ale setting
+let g:ale_linters = { 
+  'javascript' : ['eslint'],
+}
+
+" key mappings
+
+" execute ctags when press f5
+nnoremap <f5> :!ctags -R <CR>
+
+" ale key mapping
+nmap <silent> [W <Plug>(ale_first)
+nmap <silent> [w <Plug>(ale_previous)
+nmap <silent> ]W <Plug>(ale_next)
+nmap <silent> ]W <Plug>(ale_last)
