@@ -30,6 +30,7 @@ call minpac#add('radenling/vim-dispatch-neovim')
 call minpac#add('jiangmiao/auto-pairs')
 call minpac#add('tpope/vim-dispatch')
 call minpac#add('kassio/neoterm')
+call minpac#add('w0rp/ale')
 
 " related to fzf
 " call minpac#add('/usr/local/opt/fzf')
