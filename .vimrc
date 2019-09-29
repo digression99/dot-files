@@ -34,6 +34,8 @@ call minpac#add('jiangmiao/auto-pairs')
 call minpac#add('tpope/vim-dispatch')
 call minpac#add('kassio/neoterm')
 call minpac#add('w0rp/ale')
+call minpac#add('scrooloose/nerdtree')
+call minpac#add('Xuyuanp/nerdtree-git-plugin')
 
 " related to fzf
 " call minpac#add('/usr/local/opt/fzf')
@@ -86,3 +88,10 @@ nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
 nmap <silent> ]W <Plug>(ale_last)
+
+" nerdtree mapping
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeShowHidden=1
