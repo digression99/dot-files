@@ -1,6 +1,6 @@
 
 # copying all rc files.
-cp ~/dot-files/.zshrc ~/.zshrc
+# cp ~/dot-files/.zshrc ~/.zshrc
 
 # TODO - need to copy all ftpplugin files if exist
 cp ~/dot-files/.vimrc ~/.vim/vimrc
