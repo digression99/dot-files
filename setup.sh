@@ -17,7 +17,7 @@ cp ~/dot-files/init.vim ~/.config/nvim/init.vim
 INSTALL_PACKAGES=false
 INSTALL_PROGRAMS=false
 
-while getopts ifp opt;
+while getopts ib opt;
 do
 	case $opt in
 		i) INSTALL_PACKAGES=true ;;
