@@ -9,6 +9,10 @@ syntax on
 " set nu
 set rnu
 
+" set search setting
+set ignorecase
+set smartcase
+
 " setting up tabs
 set smartindent
 set tabstop=2
