@@ -68,9 +68,14 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ale_linters = { 
       \  'javascript' : ['eslint'],
       \ }
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_text_changed = 'always' " default
+let g:ale_lint_on_save = 1 " default
+let g:ale_lint_on_enter = 1 " default
+let g:ale_lint_on_filetype_changed = 1 " default
+let g:ale_sign_column_always = 1 " add this if you want gutter to be always appeared
 
 " key mappings
-
 " execute ctags when press f5
 nnoremap <f5> :!ctags -R <CR>
 
