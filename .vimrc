@@ -66,8 +66,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " ale setting
 let g:ale_linters = { 
-  'javascript' : ['eslint'],
-}
+      \  'javascript' : ['eslint'],
+      \ }
 
 " key mappings
 
@@ -77,5 +77,5 @@ nnoremap <f5> :!ctags -R <CR>
 " ale key mapping
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
-nmap <silent> ]W <Plug>(ale_next)
+nmap <silent> ]w <Plug>(ale_next)
 nmap <silent> ]W <Plug>(ale_last)
