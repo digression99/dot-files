@@ -109,10 +109,16 @@ let g:grepper.tools = [ 'grep', 'git', 'rg' ]
 nnoremap <Leader>* :Grepper -cword -noprompt<CR> 
 
 " Search for the current selection
-nmap gs<plug>(GrepperOperator) 
-xmap gs<plug>(GrepperOperator)
+nmap gs <plug>(GrepperOperator) 
+xmap gs <plug>(GrepperOperator)
 
 " END - vim-grepper configuration
+
+" quickfix list move
+nmap <silent> [C :cfirst<CR>
+nmap <silent> [c :cprev<CR>
+nmap <silent> ]c :cnext<CR>
+nmap <silent> ]C :clast<CR>
 
 
 
