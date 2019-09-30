@@ -40,6 +40,7 @@ call minpac#add('kassio/neoterm')
 call minpac#add('w0rp/ale')
 call minpac#add('scrooloose/nerdtree')
 call minpac#add('Xuyuanp/nerdtree-git-plugin')
+call minpac#add('mhinz/vim-grepper')
 
 " related to fzf
 " call minpac#add('/usr/local/opt/fzf')
