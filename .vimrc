@@ -120,6 +120,10 @@ nmap <silent> [c :cprev<CR>
 nmap <silent> ]c :cnext<CR>
 nmap <silent> ]C :clast<CR>
 
+" Grepper setting
+nnoremap <Leader>g :Grepper -tool git<CR>
+nnoremap <Leader>G :Grepper -tool rg<CR>
+nnoremap <Leader>* :Grepper -cword -noprompt<CR>
 
 
 
