@@ -126,5 +126,5 @@ nnoremap <Leader>g :Grepper -tool git<CR>
 nnoremap <Leader>G :Grepper -tool rg<CR>
 nnoremap <Leader>* :Grepper -cword -noprompt<CR>
 
-
-
+" vim-test setting
+let test#strategy = "dispatch"
