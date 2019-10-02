@@ -136,6 +136,12 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 " neovim terminal setting
 :tnoremap <Esc> <C-\><C-n>
 
+if has('nvim')
+    tnoremap <Esc> <C-\><C-n>
+    tnoremap <C-v><Esc> <Esc>
+endif
+
+
 
 
 
