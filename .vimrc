@@ -141,6 +141,15 @@ if has('nvim')
     tnoremap <C-v><Esc> <Esc>
 endif
 
+" START - vim-easymotion setting
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" END - vim-easymotion setting
+
+
 
 
 
