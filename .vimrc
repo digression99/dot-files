@@ -132,3 +132,10 @@ let test#strategy = "dispatch"
 
 " remove highlight search 
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+" neovim terminal setting
+:tnoremap <Esc> <C-\><C-n>
+
+
+
+
