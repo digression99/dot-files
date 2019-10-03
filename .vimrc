@@ -43,6 +43,7 @@ call minpac#add('Xuyuanp/nerdtree-git-plugin')
 call minpac#add('mhinz/vim-grepper')
 call minpac#add('janko/vim-test')
 call minpac#add('airblade/vim-gitgutter')
+call minpac#add('mattn/emmet-vim')
 
 " related to fzf
 " call minpac#add('/usr/local/opt/fzf')
