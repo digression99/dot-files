@@ -118,4 +118,3 @@ DEFAULT_USER=$USER
 
 export NVM_DIR="/Users/user/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-d

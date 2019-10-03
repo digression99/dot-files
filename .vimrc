@@ -141,6 +141,9 @@ if has('nvim')
     tnoremap <C-v><Esc> <Esc>
 endif
 
+" create terminal buffer
+nnoremap <silent> <C-k> :<C-u>sp \| wincmd j <Bar> resize 20 <Bar> te<CR><C-l>
+
 " START - vim-easymotion setting
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
