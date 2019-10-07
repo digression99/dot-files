@@ -1,9 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+# !!!!!!!!!!!!!!!! You need to change user to your name.
 export PATH=$HOME/bin:/usr/local/bin:/Users/user/Library/Python/3.7/bin:$PATH
 export PATH=$PATH:$VIMCONFIG/pack/bundle/start/fzf/bin
 
 # Path to your oh-my-zsh installation.
+# !!!!!!!!!!!!!!!! You need to change user to your name.
 export ZSH="/Users/user/.oh-my-zsh"
 
 # for android setting
@@ -16,11 +18,17 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # for neovim setting
 export VIMCONFIG=~/.config/nvim
 export VIMDATA=~/.local/share/nvim
-export VISUAL=nvim
 alias vim=nvim
 alias vi=nvim
 
 export FZF_DEFAULT_COMMAND='rg --files'
+
+export VISUAL=nvim
+
+if has('nvim') && executable('nvr')
+    let $VISUAL="nvr -cc split --remote-wait + 'set bufhidden=wipe'"
+endif
+
 
 # Set name of the theme to loa --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -116,5 +124,16 @@ DEFAULT_USER=$USER
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# !!!!!!!!!!!!!!!! You need to change user to your name.
 export NVM_DIR="/Users/user/.nvm"
+
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+	if [ -x "$(command -v nvr)" ]; then
+		alias nvim=nvr
+	else
+		alias nvim='echo "No nesting!"'
+	fi
+fi
+
