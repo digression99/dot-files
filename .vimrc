@@ -106,7 +106,7 @@ let g:NERDTreeShowHidden=1
 
 " START - vim-grepper configuration
 let g:grepper = {}
-let g:grepper.tools = [ 'grep', 'git', 'rg' ]
+let g:grepper.tools = [ 'ag', 'git', 'rg', 'grep' ]
 
 " Search for the current word
 nnoremap <Leader>* :Grepper -cword -noprompt<CR> 
@@ -124,7 +124,7 @@ nmap <silent> ]c :cnext<CR>
 nmap <silent> ]C :clast<CR>
 
 " Grepper setting
-nnoremap <Leader>g :Grepper -tool git<CR>
+nnoremap <Leader>g :Grepper -tool ag<CR>
 nnoremap <Leader>G :Grepper -tool rg<CR>
 nnoremap <Leader>* :Grepper -cword -noprompt<CR>
 
