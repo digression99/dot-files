@@ -163,9 +163,7 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 let g:EasyMotion_smartcase = 1
 " END - vim-easymotion setting
 
-
-
-
-
-
+if has('nvim') && executable('nvr')
+    let $VISUAL="nvr -cc split --remote-wait + 'set bufhidden=wipe'"
+endif
 
