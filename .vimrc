@@ -19,6 +19,10 @@ set tabstop=2
 set expandtab
 set shiftwidth=2	
 
+" undo related setting
+set undofile
+set undodir=$VIMDATA/undo
+
 " fzf setting
 " set rtp+=/usr/local/opt/fzf
 
