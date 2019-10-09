@@ -19,9 +19,19 @@ set tabstop=2
 set expandtab
 set shiftwidth=2	
 
-" undo related setting
+" START - undo related setting
 set undofile
-set undodir=$VIMDATA/undo
+
+if !has('nvim')
+    set undodir=~/.vim/undo
+else
+    set undodir=$VIMDATA/undo
+endif
+augroup vimrc
+    autocmd!
+    autocmd BufWritePre /tmp/* setlocal noundofile
+augroup END
+" END - undo related setting
 
 " fzf setting
 " set rtp+=/usr/local/opt/fzf
