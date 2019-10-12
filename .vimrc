@@ -59,6 +59,7 @@ call minpac#add('janko/vim-test')
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('mattn/emmet-vim')
 call minpac#add('tpope/vim-obsession')
+call minpac#add('editorconfig/editorconfig-vim')
 
 " related to fzf
 " call minpac#add('/usr/local/opt/fzf')
