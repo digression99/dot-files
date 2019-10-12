@@ -60,6 +60,11 @@ call minpac#add('airblade/vim-gitgutter')
 call minpac#add('mattn/emmet-vim')
 call minpac#add('tpope/vim-obsession')
 call minpac#add('editorconfig/editorconfig-vim')
+call minpac#add('autozimu/languageClient-neovim', { 'branch' : 'next', 'do' : 'bash install.sh' }) 
+call minpac#add('tpope/vim-fugitive')
+call minpac#add('vim-airline/vim-airline')
+call minpac#add('vim-airline/vim-airline-themes')
+
 
 " related to fzf
 " call minpac#add('/usr/local/opt/fzf')
