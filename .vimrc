@@ -64,6 +64,7 @@ call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
+call minpac#add('morhetz/gruvbox')
 
 " installing coc.nvim
 call minpac#add('neoclide/coc.nvim', { 'branch' : 'release' })
@@ -193,4 +194,11 @@ let g:EasyMotion_smartcase = 1
 if has('nvim') && executable('nvr')
     let $VISUAL="nvr -cc split --remote-wait + 'set bufhidden=wipe'"
 endif
+
+" Related to color scheme
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+colorscheme gruvbox
+
+
+
 

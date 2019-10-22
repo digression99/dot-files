@@ -47,5 +47,8 @@ if [[ "$INSTALL_PROGRAMS" == true ]]
 then
 	brew install ripgrep
 	brew install ctags
+    # installing iterm2 nightly
+    brew tap homebrew/cask-versions
+    brew cask install iterm2-nightly
 fi
 
