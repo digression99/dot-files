@@ -82,6 +82,7 @@ endif
 let g:deoplete#enable_at_startup = 1
 
 " installing coc.nvim
+" branch fetching doesn't work. you need to checkout manually inside coc.nvim
 call minpac#add('neoclide/coc.nvim', { 'branch' : 'release' })
 call minpac#add('neoclide/coc.nvim', { 'tag' : '*', 'branch' : 'release' })
 call minpac#add('neoclide/coc.nvim', { 'do' : 'yarn install --frozen-lockfile' })
