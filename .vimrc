@@ -200,7 +200,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme gruvbox
 
 " START - Git gutter setting
-nmap ]h <Plug>GitGutterNextHunk
-nmap [h <Plug>GitGutterPrevHunk
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
 " END - Git gutter setting
 
