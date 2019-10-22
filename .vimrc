@@ -99,7 +99,7 @@ let g:neoterm_autoscroll = 1
 " ctrlp vim related settings
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 " ale setting
 let g:ale_linters = { 
