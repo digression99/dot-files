@@ -96,10 +96,12 @@ let g:neoterm_size = 10
 let g:neoterm_autoinsert = 0
 let g:neoterm_autoscroll = 1
 
-" ctrlp vim related settings
+" START - ctrlp vim related settings
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" END - ctrlp vim related settings
 
 " ale setting
 let g:ale_linters = { 
