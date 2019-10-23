@@ -1,0 +1,3 @@
+
+CocInstall coc-ultisnips
+call minpac#update()
