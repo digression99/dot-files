@@ -66,6 +66,21 @@ call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('morhetz/gruvbox')
 
+" Setting up snippets
+call minpac#add('SirVer/ultisnips')
+call minpac#add('honza/vim-snippets')
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsEditSplit="vertical"
+
+if has('nvim')
+    call minpac#add('Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' })
+else
+    call minpac#add('Shougo/deoplete.nvim')
+    call minpac#add('roxma/nvim-yarp')
+    call minpac#add('roxma/vim-hug-neovim-rpc')
+endif
+let g:deoplete#enable_at_startup = 1
+
 " installing coc.nvim
 call minpac#add('neoclide/coc.nvim', { 'branch' : 'release' })
 call minpac#add('neoclide/coc.nvim', { 'tag' : '*', 'branch' : 'release' })
