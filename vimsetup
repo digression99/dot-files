@@ -1,1 +1,3 @@
 CocInstall coc-tsserver
+CocInstall coc-ultisnips
+call minpac#update()
