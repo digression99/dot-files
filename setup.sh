@@ -50,5 +50,7 @@ then
     # installing iterm2 nightly
     brew tap homebrew/cask-versions
     brew cask install iterm2-nightly
+    # installing httpie
+    brew install httpie
 fi
 
