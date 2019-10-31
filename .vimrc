@@ -79,22 +79,37 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsEditSplit="vertical"
 
 " START - Language support plugins
-" call minpac#add('w0rp/ale')
+call minpac#add('dense-analysis/ale')
 
-" if has('nvim')
-"     call minpac#add('Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' })
-" else
-"    call minpac#add('Shougo/deoplete.nvim')
-"     call minpac#add('roxma/nvim-yarp')
-"     call minpac#add('roxma/vim-hug-neovim-rpc')
-" endif
-" let g:deoplete#enable_at_startup = 1
+" ale setting
+let g:ale_linters = { 
+      \  'javascript' : ['eslint'],
+      \ }
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_text_changed = 'always' " default
+let g:ale_lint_on_save = 1 " default
+let g:ale_lint_on_enter = 1 " default
+let g:ale_lint_on_filetype_changed = 1 " default
+let g:ale_sign_column_always = 1 " add this if you want gutter to be always appeared
+
+" ale key mapping
+nmap <silent> [W <Plug>(ale_first)
+nmap <silent> [w <Plug>(ale_previous)
+nmap <silent> ]w <Plug>(ale_next)
+nmap <silent> ]W <Plug>(ale_last)
+
+if has('nvim')
+    call minpac#add('Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' })
+else
+   call minpac#add('Shougo/deoplete.nvim')
+    call minpac#add('roxma/nvim-yarp')
+    call minpac#add('roxma/vim-hug-neovim-rpc')
+endif
+let g:deoplete#enable_at_startup = 1
 
 " installing coc.nvim
 " branch fetching doesn't work. you need to checkout manually inside coc.nvim
-call minpac#add('neoclide/coc.nvim', { 'branch' : 'release' })
-call minpac#add('neoclide/coc.nvim', { 'tag' : '*', 'branch' : 'release' })
-call minpac#add('neoclide/coc.nvim', { 'do' : 'yarn install --frozen-lockfile' })
+call minpac#add('neoclide/coc.nvim', { 'tag' : '*', 'branch' : 'release', 'do' : 'yarn install --frozen-lockfile' })
 " END - Language support plugins
 
 " related to fzf
@@ -115,9 +130,9 @@ call minpac#add('ryanoasis/vim-devicons')
 " START - setup vim devicons
 " You need to install nerd fonts before using this.
 " https://github.com/ryanoasis/nerd-fonts#patched-fonts
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+set guifont=DroidSansMono\ Nerd\ Font:h11
+let g:airline_powerline_fonts = 1
 " END - setup vim devicons
-
 
 " run fzf on ctrl + p
 " nnoremap <C-p> :<C-u>FZF<CR>
@@ -139,26 +154,9 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 " END - ctrlp vim related settings
 
-" ale setting
-let g:ale_linters = { 
-      \  'javascript' : ['eslint'],
-      \ }
-let g:ale_fix_on_save = 1
-let g:ale_lint_on_text_changed = 'always' " default
-let g:ale_lint_on_save = 1 " default
-let g:ale_lint_on_enter = 1 " default
-let g:ale_lint_on_filetype_changed = 1 " default
-let g:ale_sign_column_always = 1 " add this if you want gutter to be always appeared
-
 " key mappings
 " execute ctags when press f5
 nnoremap <f5> :!ctags -R <CR>
-
-" ale key mapping
-nmap <silent> [W <Plug>(ale_first)
-nmap <silent> [w <Plug>(ale_previous)
-nmap <silent> ]w <Plug>(ale_next)
-nmap <silent> ]W <Plug>(ale_last)
 
 " nerdtree mapping
 map <C-b> :NERDTreeToggle<CR>
@@ -181,10 +179,10 @@ xmap gs <plug>(GrepperOperator)
 " END - vim-grepper configuration
 
 " quickfix list move
-nmap <silent> [C :cfirst<CR>
-nmap <silent> [c :cprev<CR>
-nmap <silent> ]c :cnext<CR>
-nmap <silent> ]C :clast<CR>
+" nmap <silent> [C :cfirst<CR>
+" nmap <silent> [c :cprev<CR>
+" nmap <silent> ]c :cnext<CR>
+" nmap <silent> ]C :clast<CR>
 
 " Grepper setting
 nnoremap <Leader>g :Grepper -tool ag<CR>
@@ -200,6 +198,7 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 " neovim terminal setting
 :tnoremap <Esc> <C-\><C-n>
 
+" toggle terminal buffer out when press ESC
 if has('nvim')
     tnoremap <Esc> <C-\><C-n>
     tnoremap <C-v><Esc> <Esc>
@@ -241,4 +240,3 @@ nmap [h <Plug>(GitGutterPrevHunk)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 
-let g:airline_powerline_fonts = 1
