@@ -71,6 +71,7 @@ call minpac#add('morhetz/gruvbox')
 call minpac#add('terryma/vim-multiple-cursors')
 call minpac#add('mhinz/vim-startify')
 call minpac#add('romainl/vim-qf')
+call minpac#add('diepm/vim-rest-console')
 
 " Setting up snippets
 call minpac#add('SirVer/ultisnips')
