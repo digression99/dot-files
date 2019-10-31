@@ -21,7 +21,6 @@ set tabstop=2
 set expandtab
 set shiftwidth=2	
 
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 
 " START - undo related setting
 set undofile
@@ -51,11 +50,12 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('justinmk/vim-sneak')
 call minpac#add('easymotion/vim-easymotion')
 call minpac#add('tpope/vim-projectionist')
-call minpac#add('radenling/vim-dispatch-neovim')
 call minpac#add('jiangmiao/auto-pairs')
+
 call minpac#add('tpope/vim-dispatch')
+call minpac#add('radenling/vim-dispatch-neovim')
+
 call minpac#add('kassio/neoterm')
-call minpac#add('w0rp/ale')
 call minpac#add('scrooloose/nerdtree')
 call minpac#add('Xuyuanp/nerdtree-git-plugin')
 call minpac#add('mhinz/vim-grepper')
@@ -78,20 +78,24 @@ call minpac#add('honza/vim-snippets')
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsEditSplit="vertical"
 
-if has('nvim')
-    call minpac#add('Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' })
-else
-    call minpac#add('Shougo/deoplete.nvim')
-    call minpac#add('roxma/nvim-yarp')
-    call minpac#add('roxma/vim-hug-neovim-rpc')
-endif
-let g:deoplete#enable_at_startup = 1
+" START - Language support plugins
+" call minpac#add('w0rp/ale')
+
+" if has('nvim')
+"     call minpac#add('Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' })
+" else
+"    call minpac#add('Shougo/deoplete.nvim')
+"     call minpac#add('roxma/nvim-yarp')
+"     call minpac#add('roxma/vim-hug-neovim-rpc')
+" endif
+" let g:deoplete#enable_at_startup = 1
 
 " installing coc.nvim
 " branch fetching doesn't work. you need to checkout manually inside coc.nvim
 call minpac#add('neoclide/coc.nvim', { 'branch' : 'release' })
 call minpac#add('neoclide/coc.nvim', { 'tag' : '*', 'branch' : 'release' })
 call minpac#add('neoclide/coc.nvim', { 'do' : 'yarn install --frozen-lockfile' })
+" END - Language support plugins
 
 " related to fzf
 " call minpac#add('/usr/local/opt/fzf')
@@ -105,6 +109,15 @@ call minpac#add('k-takata/minpac', {'type':'opt'})
 call minpac#add('pangloss/vim-javascript')
 call minpac#add('Quramy/tsuquyomi')
 call minpac#add('leafgarland/typescript-vim')
+
+call minpac#add('ryanoasis/vim-devicons')
+
+" START - setup vim devicons
+" You need to install nerd fonts before using this.
+" https://github.com/ryanoasis/nerd-fonts#patched-fonts
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+" END - setup vim devicons
+
 
 " run fzf on ctrl + p
 " nnoremap <C-p> :<C-u>FZF<CR>
