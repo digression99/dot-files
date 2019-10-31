@@ -241,3 +241,18 @@ nmap [h <Plug>(GitGutterPrevHunk)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 
+" vim rest console setting
+let g:vrc_auto_format_response_enabled=1
+" let g:vrc_split_request_body=1
+
+let g:vrc_curl_opts = {
+            \ '-v' : ''
+            \ }
+
+let g:vrc_output_buffer_name='__VRC_OUTPUT.<filetype>'
+let g:vrc_show_command=1
+
+let g:vrc_auto_format_response_patterns = {
+            \ 'json' : 'jq'
+            \ }
+
