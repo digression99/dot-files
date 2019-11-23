@@ -73,6 +73,7 @@ call minpac#add('mhinz/vim-startify')
 call minpac#add('romainl/vim-qf')
 call minpac#add('diepm/vim-rest-console')
 
+
 " Setting up snippets
 call minpac#add('SirVer/ultisnips')
 call minpac#add('honza/vim-snippets')
@@ -125,6 +126,7 @@ call minpac#add('k-takata/minpac', {'type':'opt'})
 call minpac#add('pangloss/vim-javascript')
 call minpac#add('Quramy/tsuquyomi')
 call minpac#add('leafgarland/typescript-vim')
+call minpac#add('posva/vim-vue')
 
 call minpac#add('ryanoasis/vim-devicons')
 
