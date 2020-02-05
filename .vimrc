@@ -60,11 +60,11 @@ call minpac#add('airblade/vim-gitgutter')
 call minpac#add('mattn/emmet-vim')
 call minpac#add('tpope/vim-obsession')
 call minpac#add('editorconfig/editorconfig-vim')
-" call minpac#add('autozimu/languageClient-neovim', { 'branch' : 'next', 'do' : 'bash install.sh' }) 
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('morhetz/gruvbox')
+call minpac#add('terryma/vim-multiple-cursors')
 
 " Setting up snippets
 call minpac#add('SirVer/ultisnips')
@@ -142,7 +142,7 @@ nmap <silent> ]w <Plug>(ale_next)
 nmap <silent> ]W <Plug>(ale_last)
 
 " nerdtree mapping
-map <C-n> :NERDTreeToggle<CR>
+map <C-b> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
@@ -215,8 +215,14 @@ endif
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme gruvbox
 
+<<<<<<< HEAD
 " START - Git gutter setting
 nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
 " END - Git gutter setting
+=======
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+
+>>>>>>> 05e4b9f... Add go to definition
 
