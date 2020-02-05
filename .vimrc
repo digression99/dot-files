@@ -1,4 +1,6 @@
 set nocompatible
+set encoding=utf8
+
 " if there's ftplugin, make it usable.
 filetype plugin indent on
 
@@ -18,6 +20,8 @@ set smartindent
 set tabstop=2
 set expandtab
 set shiftwidth=2	
+
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 
 " START - undo related setting
 set undofile
@@ -65,6 +69,7 @@ call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('morhetz/gruvbox')
 call minpac#add('terryma/vim-multiple-cursors')
+call minpac#add('mhinz/vim-startify')
 
 " Setting up snippets
 call minpac#add('SirVer/ultisnips')
@@ -90,7 +95,7 @@ call minpac#add('neoclide/coc.nvim', { 'do' : 'yarn install --frozen-lockfile' }
 " related to fzf
 " call minpac#add('/usr/local/opt/fzf')
 " call minpac#add('junegunn/fzf.vim')
-call minpac#add('kien/ctrlp.vim')
+call minpac#add('ctrlpvim/ctrlp.vim')
 
 call minpac#add('tpope/vim-scriptease', {'type':'opt'})
 call minpac#add('k-takata/minpac', {'type':'opt'})
@@ -215,14 +220,11 @@ endif
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme gruvbox
 
-<<<<<<< HEAD
 " START - Git gutter setting
 nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
 " END - Git gutter setting
-=======
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 
->>>>>>> 05e4b9f... Add go to definition
-
+let g:airline_powerline_fonts = 1
