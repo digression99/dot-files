@@ -1,3 +1,4 @@
+
 set nocompatible
 set encoding=utf8
 
